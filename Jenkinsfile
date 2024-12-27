@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_IMAGE = 'project2/yori:latest'
-        CONTAINER_NAME = 'inspiring_bardeen'
+        CONTAINER_NAME = 'crazy_wilbur'
         PORT_MAPPING = '32768:80'  // Adjust the port mapping as needed
     }
 
