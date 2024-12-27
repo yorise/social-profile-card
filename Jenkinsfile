@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = 'rmn-profile:latest'
-        CONTAINER_NAME = 'nervous_johnson'
-        PORT_MAPPING = '8082:80'  // Adjust the port mapping as needed
+        DOCKER_IMAGE = 'project2/yori:latest'
+        CONTAINER_NAME = 'inspiring_bardeen'
+        PORT_MAPPING = '32768:80'  // Adjust the port mapping as needed
     }
 
     stages {
@@ -34,12 +34,4 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            // Clean up the container after the build
-            script {
-                sh "docker rm -f ${CONTAINER_NAME} || true" // Ignore if the container doesn't exist
-            }
-        }
-    }
 }
